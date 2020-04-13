@@ -1,0 +1,102 @@
+<div style="text-align: center;">
+
+    <h1>demo works! My name is {{ name }}</h1>
+
+    <button (click)="btnClickedNull()">
+        <h1>Click Me To Log in Console</h1>
+    </button>
+
+
+
+    <button (click)="btnClickedWithInput($event)">
+        <h1>Click Me To Catch Event</h1>
+    </button>
+
+
+    <button (click)="name='New'">
+        <h1>Click Me To Change Name to New (static)</h1>
+    </button>
+
+    <button (click)="changeNameDynamic()">
+        <h1>Click Me To Change Name With Callback</h1>
+    </button>
+
+    <br><br>
+    <h1>No data binding</h1><input type="text" ngModel="name" />
+    <br><br>
+
+    <h1>One way data binding with event `()` from user to server </h1>
+    <input type="text" (ngModel)="name" />
+    <br><br>
+
+    <h1>One way data binding with property `a[]` </h1>
+    <input type="text" [ngModel]="[name, counter]" />
+    <br><br>
+
+
+    <h1>Two way data binding with `[()]`</h1>
+    <input type="text" [(ngModel)]="name" />
+    <br><br>
+
+
+    <h1> Directives</h1>
+    <button (click)="btnClickedCounterIncrement()">
+        <h4>Click Me To Increment counter : {{counter}}</h4>
+    </button>
+    <button (click)="btnClickedCounterDecrement()">
+        <h4>Click Me To Decrement counter : {{counter}}</h4>
+    </button>
+
+    <h2> Directives `if/else`</h2>
+    <h2 *ngIf="counter > 2"> My name is {{name}} and counter {{counter}}</h2>
+    <h2 *ngIf="counter <= 2"> Secret hidden ****** and counter {{counter}}</h2>
+
+
+    <h2> Directives `For Loop`</h2>
+    <h4 *ngFor="let person of people">Person is {{person.name}} with age {{person.age}}</h4>
+
+    <h2> Directives `For Loop` and `if/else`</h2>
+    <div *ngFor="let person of people">
+        <h4 *ngIf="person.age > 30">
+            Person is {{person.name}} with age {{person.age}}
+        </h4>
+    </div>
+
+  <p [ngStyle]="{'background-color': 'orange'}">{{counter}}</p>
+
+  <p [ngStyle]="{'background-color': mycolor}">{{counter}}</p>
+
+  <div *ngFor="let person of people">
+    <h3 [ngClass]="{'red': true}">
+      Person is {{person.name}} with age {{person.age}}
+    </h3>
+  </div>
+
+  <p [ngStyle]="{'background-color': mycolor}"><br></p>
+
+  <div *ngFor="let person of people">
+    <h3 [ngClass]="{'red': person.age > 30}">
+      Person is {{person.name}} with age {{person.age}}
+    </h3>
+  </div>
+
+  <p [ngStyle]="{'background-color': mycolor}"><br></p>
+
+  <div *ngFor="let person of people">
+    <h3 [ngClass]="{'red': person.age > 30}">
+      Person is {{person.name | lowercase }} with age {{person.age}}
+    </h3>
+  </div>
+
+
+  <p [ngStyle]="{'background-color': 'red'}"><br>{{ today | date:"short" }}</p>
+
+  <p [ngStyle]="{'background-color': 'cyan'}"><br>{{ today | date:"dd/MM/yyyy" }}</p>
+
+  <p [ngStyle]="{'background-color': 'yellow'}"><br>{{ today | date:"fullDate" }}</p>
+
+  <p [ngStyle]="{'background-color': 'pink'}"><br>{{ cash | currency }}</p>
+
+  <p [ngStyle]="{'background-color': 'orange'}"><br>{{ cash | currency:"EUR" }}</p>
+
+</div>

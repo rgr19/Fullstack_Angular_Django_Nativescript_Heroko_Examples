@@ -1,0 +1,9 @@
+[submodule "src/django"]
+	path = src/django
+	url = git@github.com:rgr19/MovieRater_Django.git
+[submodule "src/angular"]
+	path = src/angular
+	url = git@github.com:rgr19/MovieRater_Angular.git
+[submodule "src/nativescript"]
+	path = src/nativescript
+	url = git@github.com:rgr19/MovieRater_Nativescript.git

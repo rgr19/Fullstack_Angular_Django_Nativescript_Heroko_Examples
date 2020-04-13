@@ -1,0 +1,13 @@
+<ActionBar title="My App!" ></ActionBar>
+
+<GridLayout rows="50, auto, auto, auto" columns="*, auto, *">
+    <Label row="0" rowSpan="2" colSpan="3" text="Home Page" class="h1 text-center"></Label>
+    <FlexboxLayout class="m-10" row="2" col="0" colSpan="3" flexWrap="wrap" alignContent="flex-start">
+        <Label class="h2" text="Hello, my name is: "></Label>
+        <Label class="h2 variable" [text]="myName!"></Label>
+    </FlexboxLayout>
+    <Button class="-primary" row="3" col="0" colSpan="3" text="Click Me"
+            (tap)="btnClicked($event); toast.show()"
+    ></Button>
+</GridLayout>
+

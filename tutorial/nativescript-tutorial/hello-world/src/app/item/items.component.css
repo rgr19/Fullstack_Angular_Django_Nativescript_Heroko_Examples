@@ -1,0 +1,50 @@
+.variable {
+    background-color: aqua;
+    color: red;
+}
+
+.click {
+    background-color: green;
+    color: magenta;
+}
+
+.picker {
+    background-color: blanchedalmond;
+    color: red;
+    border-color: brown;
+    border-radius: 20;
+    border-width: 2;
+    width: 200;
+    height: 100;
+    vertical-align: middle;
+}
+
+ Tabs.bottom-nav {
+    background-color: orangered;
+    color: gold;
+    font-size: 18;
+}
+
+TabStripItem.tabstripitem-active {
+    background-color: teal;
+}
+
+TabStripItem.tabstripitem-active:active {
+    background-color: yellowgreen;
+}
+
+TabContentItem.first-tabcontent {
+    background-color: seashell;
+    color: olive;
+}
+TabContentItem.second-tabcontent {
+    background-color: slategray;
+    color: aquamarine;
+}
+TabContentItem.third-tabcontent {
+    background-color: blueviolet;
+    color: antiquewhite;
+}
+Tabs TabStrip{
+    highlight-color: red;
+}

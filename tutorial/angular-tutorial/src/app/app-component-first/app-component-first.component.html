@@ -1,0 +1,9 @@
+<p>app-component-first works!</p>
+
+<form [formGroup]="outForm" (ngSubmit)="sendForm()">
+  <label>Name</label><input type="text" formControlName="name"/><br>
+  <label>Surname</label><input type="text" formControlName="surname"/><br>
+  <button type="submit">Send</button>
+</form>
+
+{{ outForm.value | json }}

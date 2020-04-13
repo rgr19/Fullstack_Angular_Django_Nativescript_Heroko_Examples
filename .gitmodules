@@ -1,0 +1,3 @@
+[submodule "MovieRater"]
+	path = MovieRater
+	url = git@github.com:rgr19/MovieRater.git

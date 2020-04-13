@@ -1,0 +1,7 @@
+<p>app-component-second works! and CHILD ANIMAL is {{ childAnimal }}</p>
+
+<button (click)="btnClicked()">
+    <h4>Click to go back</h4>
+</button>
+
+<app-child [animal]="myAnimal" (changed)="childChanged($event)"></app-child>
